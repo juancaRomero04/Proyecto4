@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block titulo%}Crea Entrada {%endblock%}
+
+{%load crispy_forms_tags%}
+
+{%block contenido%}
+    <form method="POST" action="" class="mt-2" autocomplete="off" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form|crispy}}
+
+        <button type="submit" class="btn btn-sucess"> Guardar</button>
+    </form>
+{%endblock%}
